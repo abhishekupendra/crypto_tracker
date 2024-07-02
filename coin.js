@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (coinId) {
     const coinDetails = await fetchCoinDetails(coinId);
-    await updateChart("30", coinId); // Default to 30 days chart
+    const days = document.getElementById("chartButtons").value || "30";
+    await updateChart(days, coinId); // Default to 30 days chart
 
     displayCoinDetails(coinDetails);
   }
@@ -35,6 +36,7 @@ async function fetchCoinMarketData(coinId, days) {
 }
 
 function displayCoinDetails(coin) {
+  //showLoader();
   if (!coin) return;
 
   const coinDetailsElement = document.getElementById("coinDetails");
@@ -47,6 +49,7 @@ function displayCoinDetails(coin) {
     <p>24h High: $${coin.market_data.high_24h.usd.toLocaleString()}</p>
     <p>24h Low: $${coin.market_data.low_24h.usd.toLocaleString()}</p>
   `;
+  //hideLoader();
 }
 
 let chart;
@@ -69,7 +72,6 @@ function displayCoinChart(marketData) {
   const ctx = document.getElementById("coinChart").getContext("2d");
   const labels = marketData.prices.map((price) => new Date(price[0]));
   const data = marketData.prices.map((price) => price[1]);
-
   if (chart) {
     chart.destroy();
   }
