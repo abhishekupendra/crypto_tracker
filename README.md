@@ -1,1 +1,9 @@
 --index.html is home/landing page
+--created by abhishek upendra
+--tech used:
+      --html
+      --css
+      --javascript
+      --chart.js
+      --chartjs-adapter-date-fns
+      --API: https://api.coingecko.com/api/v3/....
