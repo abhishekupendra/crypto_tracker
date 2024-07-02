@@ -170,7 +170,7 @@ async function initialize() {
 
 function searchCrypto() {
   const searchText = searchBox.value.toLowerCase();
-  console.log(searchText);
+
   filteredData = cryptoData.filter((crypto) =>
     crypto.name.toLowerCase().includes(searchText)
   );

@@ -17,7 +17,7 @@ function populateTable(data) {
     tableBody.innerHTML =
       '<b class="NoFavourite">Favourite coins not available....</b>';
   }
-  console.log(favourites.length);
+
   data.forEach((crypto, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
