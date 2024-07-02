@@ -52,6 +52,7 @@ function displayCoinDetails(coin) {
 let chart;
 
 async function updateChart(days, coinId) {
+  showLoader();
   if (!coinId) {
     const params = new URLSearchParams(window.location.search);
     coinId = params.get("id");
@@ -59,6 +60,7 @@ async function updateChart(days, coinId) {
 
   const marketData = await fetchCoinMarketData(coinId, days);
   displayCoinChart(marketData);
+  hideLoader();
 }
 
 function displayCoinChart(marketData) {
@@ -119,4 +121,14 @@ function displayCoinChart(marketData) {
       },
     },
   });
+}
+
+const loaderDiv = document.getElementById("loader");
+
+function showLoader() {
+  loaderDiv.style.display = "flex";
+}
+
+function hideLoader() {
+  loaderDiv.style.display = "none";
 }
