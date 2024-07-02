@@ -25,7 +25,9 @@ function populateTable(data) {
             <td><img src="${crypto.image}" alt="${
       crypto.name
     }" class="crypto-icon"></td>
-    <td>${crypto.name.toLocaleString()}</td>
+    <td class="fullTd"><a class="fullTd" href="coin.html?id=${
+      crypto.id
+    }">${crypto.name.toLocaleString()}</a></td>
             <td>$${crypto.current_price.toLocaleString()}</td>
             <td>${crypto.total_volume.toLocaleString()}</td>
             <td>$${crypto.market_cap.toLocaleString()}</td>

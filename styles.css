@@ -30,6 +30,11 @@ body {
   align-items: center;
 }
 
+.nav-middle {
+  display: flex;
+  align-items: center;
+}
+
 .nav-button {
   margin-left: 20px;
   color: white;
