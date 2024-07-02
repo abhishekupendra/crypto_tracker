@@ -206,8 +206,8 @@ tr:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 10px;
   font-weight: bold;
-  color: blue;
-  background-color: orange;
+  color: orange;
+  background-color: black;
 }
 
 .coinContainer {
@@ -227,7 +227,7 @@ tr:hover {
 }
 
 .heading {
-  color: green;
+  color: rgb(7, 46, 240);
   align-items: center;
   justify-content: center;
   display: flex;

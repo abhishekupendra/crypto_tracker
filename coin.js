@@ -38,8 +38,10 @@ function displayCoinDetails(coin) {
   if (!coin) return;
 
   const coinDetailsElement = document.getElementById("coinDetails");
-
+  const coinName = document.getElementById("coinName");
+  coinName.innerHTML = `${coin.name} (${coin.symbol.toUpperCase()})`;
   coinDetailsElement.innerHTML = `
+  <div><img src=${coin.image.large}></div>
     <h1>${coin.name} (${coin.symbol.toUpperCase()})</h1>
     <p>Market Cap: $${coin.market_data.market_cap.usd.toLocaleString()}</p>
     <p>Current Price: $${coin.market_data.current_price.usd.toLocaleString()}</p>
