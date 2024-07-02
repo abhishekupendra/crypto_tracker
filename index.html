@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="loader" id="loader">
+
+        <div class="loading-text">
+            <div class="spinner"></div>Loading...
+        </div>
+    </div>
+    </div>
+    <div class="navbar">
+        <div class="nav-left">
+            <span class="app-name">Crypto Tracker</span>
+        </div>
+        <div class="nav-right">
+            <a href="./index.html" class="nav-button">Home</a>
+            <a href="favourites.html" class="nav-button">Favourites</a>
+            <input type="text" placeholder="Search..." class="search-box" id="search-box">
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <label for="sortOptions">Sort By:</label>
+            <select id="sortOptions">
+                <option value="market_cap_desc">Market Cap Descending</option>
+                <option value="market_cap_asc">Market Cap Ascending</option>
+                <option value="volume_desc">Volume Descending</option>
+                <option value="volume_asc">Volume Ascending</option>
+                <option value="price_desc">Price Descending</option>
+                <option value="price_asc">Price Ascending</option>
+            </select>
+        </div>
+        <table id="crypto-table">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>Price <span id="price"></span></th>
+                    <th>Volume<span id="volume"></span></th>
+                    <th>Market Cap<span id="market_cap"></span></th>
+                    <th>Favourite</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="pagination" id="pagination">
+            <!-- Pagination numbers will be inserted here dynamically -->
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

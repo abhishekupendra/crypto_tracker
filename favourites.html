@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Cryptos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <span class="app-name">Crypto Tracker</span>
+        </div>
+        <div class="nav-right">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="favourites.html" class="nav-button">Favourites</a>
+            <input type="text" placeholder="Search..." class="search-box" id="search-box">
+        </div>
+    </div>
+
+    <div class="container">
+        <table id="favourite-crypto-table">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>Price <span id="price-sort" class="sort-arrows"> 🠥 🠧</span></th>
+                    <th>Volume</th>
+                    <th>Market Cap</th>
+                    <th>Favourite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Favourite data will be inserted here dynamically -->
+            </tbody>
+
+        </table>
+        <div class="pagination" id="pagination">
+            <!-- Pagination numbers will be inserted here dynamically -->
+        </div>
+    </div>
+
+    <script src="favourites.js"></script>
+</body>
+
+</html>

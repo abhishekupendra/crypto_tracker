@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Detail</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1 class="heading" id="coinName">Coin Detail</h1>
+    </div>
+    <div class="coinContainer">
+
+        <div class="coinDetails" id="coinDetails"></div>
+        <div class="chart" id="chartContainer">
+            <div id="chartButtons">
+                <button id="1d" onclick="updateChart('1')">1D</button>
+                <button id="7d" onclick="updateChart('7')">7D</button>
+                <button id="30d" onclick="updateChart('30')">30D</button>
+            </div>
+            <canvas id="coinChart"></canvas>
+        </div>
+    </div>
+    <script src="coin.js"></script>
+</body>
+
+</html>
